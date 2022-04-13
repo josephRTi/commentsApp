@@ -16,6 +16,7 @@ urlpatterns = [
     path('comment/', CommentCreateView.as_view()),
     path('note_comments_tree/<int:pk>', CommentTreeView.as_view()),
     path('note_comments/<int:pk>', CommentView.as_view()),
+    path('answers_to_comment_tree/<int:pk>', CommentAnswerTreeView.as_view()),
     path('answers_to_comment/<int:pk>', CommentAnswerView.as_view()),
     # path('auth/', include('djoser.urls')),
     # path('auth/token', obtain_auth_token, name='token'),

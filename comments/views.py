@@ -46,8 +46,18 @@ class CommentView(generics.ListAPIView):
         return queryset
 
 
-class CommentAnswerView(generics.ListAPIView):
+class CommentAnswerTreeView(generics.ListAPIView):
     serializer_class = CommentTreeSerializer
+    queryset = Comment.objects.all()
+
+    def get_queryset(self):
+        queryset = Comment.objects.all().filter(pk=self.kwargs['pk'])
+
+        return queryset
+
+
+class CommentAnswerView(generics.ListAPIView):
+    serializer_class = CommentSerializer
     queryset = Comment.objects.all()
 
     def get_queryset(self):
