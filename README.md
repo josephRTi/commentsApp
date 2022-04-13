@@ -1,6 +1,3 @@
-# API for Votings
-Задача: спроектировать и разработать API для системы опросов пользователей
-
 ## ТЗ:
 Функциональные требования:
 У системы должны быть методы API, которые обеспечивают
@@ -28,7 +25,6 @@ git clone https://github.com/josephRTi/commentsApp
 cd commentsApp
 docker-compose build 
 docker-compose up -d  
-docker-compose logs -f 
 ```
 Миграции
 ```bash
@@ -41,6 +37,10 @@ docker-compose exec web python manage.py createsuperuser
 
 * Приложение будет доступно по адресу: http://0.0.0.0:8000/
 
+Просмотр логов
+```bash
+docker-compose logs -f 
+```
 
 ### Документация
 
