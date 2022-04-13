@@ -61,6 +61,6 @@ class CommentAnswerView(generics.ListAPIView):
     queryset = Comment.objects.all()
 
     def get_queryset(self):
-        queryset = Comment.objects.all().filter(pk=self.kwargs['pk'])
+        queryset = Comment.objects.all().filter(parent=self.kwargs['pk'])
 
         return queryset
