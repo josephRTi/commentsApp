@@ -25,7 +25,7 @@ class NotesView(generics.ListAPIView):
 
 
 class CommentCreateView(generics.CreateAPIView):
-    serializer_class = CommentSerializer
+    serializer_class = CommentCreateSerializer
 
 
 class CommentTreeView(generics.ListAPIView):
