@@ -28,6 +28,7 @@ docker-compose up -d
 ```
 Миграции
 ```bash
+docker-compose exec web python manage.py makemigrations --noinput
 docker-compose exec web python manage.py migrate --noinput
 ```
 Создание суперпользователя для доступа к админ панели:
